@@ -35,7 +35,7 @@ const Product = () => {
   console.log("data:", data);
 
   const buttonFunc = () => {
-    dispatch(createDataFunc(productInfo));
+    dispatch(createDataFunc({ ...productInfo, id: data.length + 1 }));
     dispatch(modalFunc());
   };
 
